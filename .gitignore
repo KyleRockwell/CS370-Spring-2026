@@ -1,0 +1,44 @@
+# =========================
+# IDE files
+# =========================
+.idea/
+*.iml
+
+# VSCode (if anyone uses it)
+.vscode/
+
+# =========================
+# Build directories
+# =========================
+cmake-build-*/
+build/
+out/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Executables / binaries
+# =========================
+*.exe
+*.out
+*.o
+*.obj
+*.dll
+*.a
+*.so
+
+# =========================
+# Logs
+# =========================
+*.log
