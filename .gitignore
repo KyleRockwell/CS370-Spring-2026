@@ -1,3 +1,20 @@
+#
+# =========================
+# homedir dotfiles 
+# =========================
+
+.bash*
+.cache/
+.emacs
+.lesshst
+.mysql_history
+.ssh/
+.vim/
+.viminfo
+.zprofile
+.zshrc
+CS370-Spring-2026/
+
 # =========================
 # IDE files
 # =========================
