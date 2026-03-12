@@ -2,7 +2,7 @@
 # =========================
 # homedir dotfiles 
 # =========================
-
+.vimrc
 .bash*
 .cache/
 .emacs

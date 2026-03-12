@@ -2,9 +2,10 @@
 #include <mysql/mysqld_error.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MYSQL_USERNAME "teamg_user"
-#define MYSQL_PASSWORD "LemonGreenApple"
+#define MYSQL_PASSWORD "333333333"
 #define MYSQL_DATABASE "teamg_db"
 
 int main (int agrc, char *argv[])
@@ -15,7 +16,6 @@ int main (int agrc, char *argv[])
   MYSQL *conn;
   MYSQL_RES *res;
   MYSQL_ROW row;
-
   conn = mysql_init (NULL);
 // ***********************
 // * Connect to database *
@@ -52,7 +52,7 @@ int main (int agrc, char *argv[])
   int len1 = strlen(username);
   int len2 = strlen(password);
   int totalLen = BASE_LENGTH + len1 + len2;
-  char *cmd = malloc(totalLen);
+  char *cmd = calloc(totalLen, sizeof(char));
 
   //Concatenate the commmand into cmd
   strcat(cmd, "INSERT INTO Users (Username, Password) VALUES (");
@@ -66,8 +66,8 @@ int main (int agrc, char *argv[])
   strcat(cmd, ");");
 
   //Execute the command
+  printf("%s", cmd);
   if( mysql_query(conn, cmd)) 
 	printf("Good!");
-
   mysql_close (conn);
 }
