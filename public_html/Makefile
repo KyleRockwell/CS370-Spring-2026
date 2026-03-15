@@ -1,7 +1,5 @@
-
 default:
-	gcc addInfo.c -I/usr/include/mysql -I/usr/include/mysql/mysql -L/usr/lib64 -lmariadb -o addInfo.cgi
-
+	gcc addInfo.c `mysql_config --include` `mysql_config --libs` -o addInfo.cgi
 
 clean:
-	rm addInfo.cgi
+	rm -f addInfo.cgi
