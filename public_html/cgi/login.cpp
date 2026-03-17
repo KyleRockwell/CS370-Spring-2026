@@ -80,7 +80,7 @@ int main()
 
         cout << "<h1>Welcome, " << username << "</h1>";
 
-        cout << "<a href='/~teamg/index.html'>Logout</a>";
+        cout << "<a href='../index.html'>Logout</a>";
 
         cout << "</body>";
         cout << "</html>";
@@ -88,7 +88,7 @@ int main()
     else
     {
         cout << "<h1>Invalid email or password</h1>";
-        cout << "<a href='/~teamg/login.html'>Try Again</a>";
+        cout << "<a href='../login.html'>Try Again</a>";
     }
 
     mysql_close(conn);

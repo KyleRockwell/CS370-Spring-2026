@@ -35,7 +35,7 @@ int main()
 
     cout << "<p>This is your user dashboard.</p>";
 
-    cout << "<a href='/~teamg/index.html'>Logout</a>";
+    cout << "<a href='../index.html'>Logout</a>";
 
     cout << "</body>";
     cout << "</html>";

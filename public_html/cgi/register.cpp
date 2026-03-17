@@ -65,7 +65,7 @@ int main()
     if(mysql_num_rows(res) > 0)
     {
         cout << "<h1>Email already registered</h1>";
-        cout << "<a href='/~teamg/register.html'>Try again</a>";
+        cout << "<a href='../register.html'>Try again</a>";
         return 0;
     }
 
@@ -76,7 +76,7 @@ int main()
     mysql_query(conn, insertQuery.c_str());
 
     cout << "<h1>Registration successful</h1>";
-    cout << "<a href='/~teamg/login.html'>Login</a>";
+    cout << "<a href='../login.html'>Login</a>";
 
     mysql_close(conn);
 }
