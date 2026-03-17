@@ -40,8 +40,4 @@ int main()
     cout << "</body>";
     cout << "</html>";
 
-    for(int time = 0; time <= 5; time++) { //Counter for auto-timeout
-        sleep(1);
-    }
-    cout << "time is UP";
 }
