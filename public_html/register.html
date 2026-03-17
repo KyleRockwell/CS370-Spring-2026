@@ -3,15 +3,21 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>G-Bay Login</title>
+        <title>G-Bay Registration</title>
     </head>
 
 ```
 <body>
 
-    <h1>Login to G-Bay</h1>
+    <h1>Create a G-Bay Account</h1>
 
-    <form action="/~teamg/cgi-bin/login.cgi" method="POST">
+    <form action="/~teamg/cgi-bin/register.cgi" method="POST">
+
+        <label for="username">Username:</label>
+        <br>
+        <input type="text" id="username" name="username" required>
+
+        <br><br>
 
         <label for="email">Email:</label>
         <br>
@@ -25,13 +31,13 @@
 
         <br><br>
 
-        <input type="submit" value="Login">
+        <input type="submit" value="Register">
 
     </form>
 
     <br>
 
-    <a href="register.html">Create an account</a>
+    <a href="login.html">Already have an account? Login</a>
 
 </body>
 ```
