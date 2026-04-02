@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>G-Bay</title>
+    </head>
+
+```
+<body>
+<<<<<<< HEAD
+
+    <h1>G-Bay</h1>
+
+    <p>Welcome to G-Bay</p>
+
+    <br>
+
+    <a href="login.html">
+        <button>Login</button>
+    </a>
+
+    <br><br>
+
+    <a href="register.html">
+        <button>New User? Register</button>
+    </a>
+
+=======
+	<script src="script.js"></script> <!-- Script to check text boxes and redirect webpage if correct -->
+	<div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+		<div>
+			<h1>GBay Login</h1>
+			<p>Username:
+			  	<input type="text" id="username" name="username">
+			</p>
+			<p>Password:
+			   	<input type="text" id="password" name="password">	
+ 			</p>
+			<p>
+				<input type="button" value="Submit" onclick="login()">
+			</p>
+		</div>
+>>>>>>> 8c64dc06f3e8c06226ce6b9df7bbae9374f3e9a0
+</body>
+```
+
+</html>

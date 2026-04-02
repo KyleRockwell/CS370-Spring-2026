@@ -12,6 +12,10 @@
 .vim/
 .viminfo
 .zprofile
+.dotnet
+.npm
+.vscode-server/
+.wget-hsts
 .zshrc
 CS370-Spring-2026/
 
@@ -24,6 +28,10 @@ CS370-Spring-2026/
 # VSCode (if anyone uses it)
 .vscode/
 
+# =========================
+# Vim .swp files
+# =========================
+*.swp
 # =========================
 # Build directories
 # =========================
