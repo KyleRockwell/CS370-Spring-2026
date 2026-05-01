@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bid on an Item</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{margin:0;background:#f5f7fb;font-family:Arial,sans-serif;color:#111;}
+
+    /* Top nav (same style as home/sell) */
+    .nav{background:#fff;
+      border-bottom:1px solid #e5e7eb;}
+    .nav-inner{
+      max-width:980px;
+      margin:0 auto;
+      padding:12px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{font-weight:bold;}
+    .nav-links{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      flex-wrap:wrap;}
+    .nav a{
+      color:#2563eb;
+      text-decoration:none;
+      font-weight:bold;}
+    .nav a:hover{text-decoration:underline;}
+    .nav .active{
+      color:#111;
+      text-decoration:none;
+      cursor:default;}
+
+    /* Page content */
+    .wrap{
+      max-width:790px;
+      margin:0 auto;
+      padding:24px;}
+    .card{
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(0,0,0,.06);
+      max-width:720px;
+    }
+    h1{
+      margin:0 0 6px;
+      font-size:24px;}
+    p{
+      margin:0 0 14px;
+      color:#555;
+      line-height:1.4;}
+
+    label{
+      display:block;
+      margin-top:12px;
+      font-weight:bold;}
+    select, input{
+      width:100%;
+      padding:10px;
+      margin-top:6px;
+      border:1px solid #d1d5db;
+      border-radius:8px;
+      box-sizing:border-box;
+      font-family:inherit;
+      font-size:14px;
+    }
+
+    .note{
+      margin-top:10px;
+      color:#666;
+      font-size:13px;}
+
+    button{
+      margin-top:16px;
+      padding:10px 12px;
+      border:0;
+      border-radius:8px;
+      background:#2563eb;
+      color:#fff;
+      font-weight:bold;
+      cursor:pointer;
+    }
+    button:hover{filter:brightness(.95);}
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">G-Bay</div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="logout.cgi">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="card">
+      <h1>Ongoing Auctions</h1>
+      <table>
+        <thead>
+	  <tr><th>Item Name</th><th>Description</th><th>Place Bid</th></tr>
+        </thead>
+     
+        <tbody id="items"></tbody>
+      </table>
+    <script>
+    fetch("./cgi-bin/getAuctionsTable.cgi")
+	.then(res => res.text())
+	.then(data => {document.getElementById("items").innerHTML = data;})
+    	.catch(err => console.log(err));
+	</script>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,56 +1,74 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>G-Bay Registration</title>
-    </head>
-
-<!DOCTYPE html>
-
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>G-Bay Registration</title>
-    </head>
-
-
+<head>
+  <meta charset="utf-8">
+  <title>GBay Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+    }
+    .card {
+      width: 340px;
+      padding: 24px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    }
+    h1 { margin: 0 0 6px; }
+    p  { margin: 0 0 14px; color: #555; font-size: 14px; }
+    label { display: block; margin-top: 12px; }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      box-sizing: border-box;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 16px;
+      border: 0;
+      border-radius: 8px;
+      background: #2563eb;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
 <body>
+  <div class="card">
+    <h1>Register</h1>
+    <p>Email will be your login username.</p>
 
-    <h1>Create a G-Bay Account</h1>
+    <form method="post" action="cgi-bin/register.cgi">
+      <input type="hidden" name="action" value="register">
+      
+       <label for="email">Username</label>
+      <input id="username" name="username" type="username" required>
+      
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
 
-    <form action="cgi-bin/register.cgi" method="POST">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required minlength="8">
 
-        <label for="username">Username:</label>
-        <br>
-        <input type="text" id="username" name="username" required autofocus>
-
-        <br><br>
-
-        <label for="email">Email:</label>
-        <br>
-        <input type="email" id="email" name="email" required>
-
-        <br><br>
-
-        <label for="password">Password:</label>
-        <br>
-        <input type="password" id="password" name="password" required>
-
-        <br><br>
-
-        <input type="submit" value="Register">
-
+      <button type="submit">Create account</button>
     </form>
 
-    <br>
-
-    <a href="login.html">Already have an account? Login</a>
-
+    <div class="link">
+      <a href="index.html">Back to Home</a>
+    </div>
+  </div>
 </body>
-
-
-</html>
-
 </html>

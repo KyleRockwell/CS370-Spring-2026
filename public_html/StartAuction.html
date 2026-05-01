@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sell an Item</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{
+      margin:0;
+      background:#f5f7fb;
+      font-family:Arial,sans-serif;
+      color:#111;}
+
+    /* Top nav (same style as home) */
+    .nav{
+      background:#fff;
+      border-bottom:1px solid #e5e7eb;}
+    .nav-inner{
+      max-width:980px;
+      margin:0 auto;
+      padding:12px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{font-weight:bold;}
+    .nav-links{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      flex-wrap:wrap;}
+    .nav a{
+      color:#2563eb;
+      text-decoration:none;
+      font-weight:bold;}
+    .nav a:hover{text-decoration:underline;}
+    .nav .active{color:#111;text-decoration:none;cursor:default;}
+
+    /* Page content */
+    .wrap{
+      max-width:790px;
+      margin:0 auto;
+      padding:24px;}
+    .card{
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(0,0,0,.06);
+      max-width:720px;
+    }
+    h1{
+      margin:0 0 6px;
+      font-size:24px;}
+    p{
+      margin:0 0 14px;
+      color:#555;
+      line-height:1.4;}
+
+    label{
+      display:block;
+      margin-top:12px;
+      font-weight:bold;}
+
+    input, textarea{
+      width:100%;
+      padding:10px;
+      margin-top:6px;
+      border:1px solid #d1d5db;
+      border-radius:8px;
+      box-sizing:border-box;
+      font-family:inherit;
+      font-size:14px;
+    }
+
+    button{
+      margin-top:16px;
+      padding:10px 12px;
+      border:0;
+      border-radius:8px;
+      background:#2563eb;
+      color:#fff;
+      font-weight:bold;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">G-Bay</div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="logout.cgi">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="card">
+      <h1>Sell an Item</h1>
+      <p>Fill out the details below to create an auction. Auctions last 7 days (168 hours)</strong> from the start time.</p>
+
+      <form method="post" action="cgi-bin/startAuction.cgi">
+        <label for="item_name">Item Name</label>
+        <input id="item_name" name="item_name" required>
+
+        <label for="item_desc">Description of item</label>
+        <textarea id="item_desc" name="item_desc" required></textarea>
+
+        <div class="row">
+          <div>
+            <label for="start_price">Starting bid price</label>
+            <input id="start_price" name="start_price" type="number" step="0.01" min="0" required>
+          </div>
+
+          <div>
+            <label for="start_time">Starting date and time</label>
+            <input id="start_time" name="start_time" type="datetime-local" required>
+          </div>
+        </div>
+
+        <button type="submit">Create Auction</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

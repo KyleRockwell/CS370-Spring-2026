@@ -1,7 +1,13 @@
-#include <iostream>
-#include <string>
-#include <cstdlib>
 #include <mysql/mysql.h>
+#include <mysql/mysqld_error.h>
+#include <cstdio>
+#include <cstring>
+#include <cstdlib>
+#include <cmath>
+#include <ctime>
+#include <vector>
+#include <iostream>
+#include "funcs.cpp"
 
 #define MYSQL_USERNAME "teamg_user"
 #define MYSQL_PASSWORD "333333333"
@@ -9,25 +15,6 @@
 
 using namespace std;
 
-string getValue(string data, string key)
-{
-size_t start = data.find(key + "=");
-
-
-if(start == string::npos)
-    return "";
-
-start += key.length() + 1;
-
-size_t end = data.find("&", start);
-
-if(end == string::npos)
-    return data.substr(start);
-
-return data.substr(start, end - start);
-
-
-}
 
 int main()
 {

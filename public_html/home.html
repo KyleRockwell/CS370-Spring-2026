@@ -1,24 +1,144 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>G-Bay Home</title>
-    </head>
+<head>
+  <script src="home.js"></script>
+  <meta charset="utf-8">
+   <title>GBay Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{
+      margin:0;
+      background:#f5f7fb;
+      font-family:Arial,sans-serif;
+      color:#111;}
 
+    /* Top nav */
+    .nav{
+      background:#fff;
+      border-bottom:1px solid #e5e7eb;}
+    .nav-inner{
+      max-width:980px;
+      margin:0 auto;
+      padding:12px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
 
+    .brand{font-weight:bold;}
+    .nav-links{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      flex-wrap:wrap;}
+    .nav a{
+      color:#2563eb;
+      text-decoration:none;
+      font-weight:bold;}
+
+    .nav a:hover{text-decoration:underline;}
+    .nav .active{
+      color:#111;
+      text-decoration:none;
+      cursor:default;}
+
+    /* Page content */
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:24px;}
+    h1{
+      margin:0 0 6px;
+      font-size:26px;}
+    p{
+      margin:0 0 18px;
+      color:#555;
+      line-height:1.4;}
+
+    .section-title{
+      margin:22px 0 10px;
+      font-size:16px;
+      color:#333;}
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;}
+    .tile{
+      display:block;
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:12px;
+      padding:16px;
+      text-decoration:none;
+      color:inherit;
+      box-shadow:0 6px 18px rgba(0,0,0,.06);
+    }
+    .tile:hover{border-color:#cfd6e3;}
+    .tile-title{margin:0;font-size:18px;}
+    .tile-desc{margin:8px 0 0;color:#555;font-size:14px;line-height:1.4;}
+
+  
+  </style>
+</head>
 <body>
 
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">G-Bay</div>
+      <div class="nav-links">
+        <span class="active">Home</span>
+        <a href="index.html">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
     <h1>Welcome to G-Bay</h1>
+    <p>You are logged in. Use the options below to bid, sell, or view your activity.</p>
 
-    <p>You are logged in.</p>
+    <div class="section-title">Actions</div>
+    <div class="grid">
+      <a class="tile" href="StartBid.html">
+        <h2 class="tile-title">Bid on an Item</h2>
+        <p class="tile-desc">Choose an active auction and bid.</p>
+      </a>
 
-    <button onclick="logout()">Logout</button>
+      <a class="tile" href="StartAuction.html">
+        <h2 class="tile-title">Sell an Item</h2>
+        <p class="tile-desc">Create a new auction with an item description, start price.</p>
+      </a>
+    </div>
 
-    <script src="session.js"></script>
+    <div class="section-title">Transactions</div>
+    <div class="grid">
+      <a class="tile" href="Selling.html">
+        <h2 class="tile-title">Selling</h2>
+        <p class="tile-desc">Active auctions you’re running and auctions that have closed.</p>
+      </a>
+
+      <a class="tile" href="Purchases.html">
+        <h2 class="tile-title">Purchases</h2>
+        <p class="tile-desc">Auctions you won and the final winning bid.</p>
+      </a>
+
+      <a class="tile" href="CurrentBids.html">
+        <h2 class="tile-title">Current Bids</h2>
+        <p class="tile-desc">Auctions you’re bidding on right now, including outbid warnings.</p>
+      </a>
+
+      <a class="tile" href="DidntWin.html">
+        <h2 class="tile-title">Didn’t Win</h2>
+        <p class="tile-desc">Auctions you bid on that ended with someone else winning.</p>
+      </a>
+
+      <a class="tile" href="ShowAuctions.html">
+	<h2 class="tile-title">Ongoing Auctions</h2>
+	<p class="tile-desc">Auctions that are currently running</p>
+      </a>
+
+    </div>
+  </div>
 
 </body>
-
-
 </html>

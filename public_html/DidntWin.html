@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Didn’t Win</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{margin:0;background:#f5f7fb;font-family:Arial,sans-serif;color:#111;}
+
+    /* Top nav (same style as home) */
+    .nav{background:#fff;
+      border-bottom:1px solid #e5e7eb;}
+    .nav-inner{
+      max-width:980px;
+      margin:0 auto;
+      padding:12px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{font-weight:bold;}
+    .nav-links{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      flex-wrap:wrap;}
+    .nav a{
+      color:#2563eb;
+      text-decoration:none;
+      font-weight:bold;}
+    .nav a:hover{text-decoration:underline;}
+    .nav .active{
+      color:#111;
+      text-decoration:none;
+      cursor:default;}
+
+    /* Page content */
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:24px;}
+    .card{
+      max-width:980px;
+      margin:0 auto;
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:12px;
+      padding:18px;
+    }
+    h1{margin:0 0 18px;}
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin:10px 0 24px;}
+    th,td{
+      border-bottom:1px solid #e5e7eb;
+      padding:10px;
+      text-align:left;
+      font-size:14px;}
+    th{
+      background:#f9fafb;
+      font-weight:bold;}
+    .muted{color:#555;}
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">G-Bay</div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="logout.cgi">Logout</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h1>Didn’t Win</h1>
+
+    <table>
+      <thead><tr><th>Item</th><th>Winning Bid</th></tr></thead>
+      <tbody id="items"></tbody>
+    </table>
+    <script>                    
+      fetch("./cgi-bin/didntWin.cgi")
+      .then(res => res.text())  
+      .then(data => {document.getElementById("items").innerHTML = data;})
+      .catch(err => console.log(err));
+   </script>          
+  </div>
+</body>
+</html>
