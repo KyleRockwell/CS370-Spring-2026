@@ -109,12 +109,12 @@
 	  <tr><th>Item Name</th><th>Description</th><th>Place Bid</th></tr>
         </thead>
      
-        <tbody id="items"></tbody>
+        <tbody id="auction_id"></tbody>
       </table>
     <script>
     fetch("./cgi-bin/getAuctionsTable.cgi")
 	.then(res => res.text())
-	.then(data => {document.getElementById("items").innerHTML = data;})
+	.then(data => {document.getElementById("auction_id").innerHTML = data;})
     	.catch(err => console.log(err));
 	</script>
 

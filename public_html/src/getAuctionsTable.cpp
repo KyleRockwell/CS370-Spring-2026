@@ -104,7 +104,18 @@ int main() {
         if (now < end_time) {
 
             if (owner_id != user_id && row[4]) {
-		std::cout << "<tr><td>" << item_name << "</td><td>" << desc << "</td><td><input type=\"number\" id=\"quantity\" name=\"quantity\" min=\"0\"><td></tr>";
+		std::cout
+		<< "<tr>"
+		<< "<td>" << item_name << "</td>"
+		<< "<td>" << desc << "</td>"
+		<< "<td>"
+		<< "<form method='post' action='./cgi-bin/startBid.cgi'>"
+		<< "<input type='hidden' name='auction_id' value='" << auction_id << "'>"
+		<< "<input name='price' type='number' step='0.01' min='0' required>"
+		<< "<input type='submit' value='Bid'>"
+		<< "</form>"
+		<< "</td>"
+		<< "</tr>";
             }
         }
     }
