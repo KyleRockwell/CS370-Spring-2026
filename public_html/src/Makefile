@@ -1,7 +1,7 @@
 all: currentBids.cgi purchases.cgi didntWin.cgi selling.cgi startAuction.cgi startBid.cgi getAuctions.cgi getAuctionsTable.cgi
 
 startAuction.cgi: startAuction.cpp
-	g++ -ggdb  startAuction.cpp -I/opt/homebrew/Cellar/mysql/9.6.0_1/include/ -L/opt/homebrew/Cellar/mysql/9.6.0_1/lib -lmysqlclient -lm -o ../cgi-bin/startAuction.cgi
+	g++  startAuction.cpp -I/opt/homebrew/Cellar/mysql/9.6.0_1/include/ -L/opt/homebrew/Cellar/mysql/9.6.0_1/lib -lmysqlclient -lm -o ../cgi-bin/startAuction.cgi
 
 
 currentBids.cgi: currentBids.cpp
@@ -18,8 +18,6 @@ selling.cgi: selling.cpp
 
 
 
-startAuctiontest.cgi: startAuctiontest.cpp
-	g++ -ggdb  startAuction.cpp -I/opt/homebrew/Cellar/mysql/9.6.0_1/include/ -L/opt/homebrew/Cellar/mysql/9.6.0_1/lib -lmysqlclient -lm -o ../cgi-bin/startAuctiontest.cgi
 
 startBid.cgi: startBid.cpp
 	g++ startBid.cpp -I/opt/homebrew/Cellar/mysql/9.6.0_1/include/ -L/opt/homebrew/Cellar/mysql/9.6.0_1/lib -lmysqlclient -lm -o ../cgi-bin/startBid.cgi
