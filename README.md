@@ -1,6 +1,6 @@
 # G-Bay
 
-[G-Bay] (https://blue.cs.sonoma.edu/~teamg/) is a mock auction site created by TeamG for Sonoma State Universities CS 370 Class. 
+[G-Bay](https://blue.cs.sonoma.edu/~teamg/) is a mock auction site created by TeamG for Sonoma State University's CS 370 Class. 
 
 
 ## Features
