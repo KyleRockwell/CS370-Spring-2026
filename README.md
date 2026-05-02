@@ -1,3 +1,15 @@
-# CS370-Spring-2026
+# G-Bay
 
-test
+[G-Bay] (https://blue.cs.sonoma.edu/~teamg/) is a mock auction site created by TeamG for Sonoma State Universities CS 370 Class. 
+
+
+## Features
+
+G-Bay Features a 
+- login page
+- account creation for new users
+- list new items for auction
+- bid on ongoing auctions
+- view lost auctions
+
+
