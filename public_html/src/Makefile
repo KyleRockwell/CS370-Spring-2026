@@ -1,4 +1,4 @@
-all: currentBids.cgi purchases.cgi didntWin.cgi selling.cgi startAuction.cgi startBid.cgi getAuctions.cgi getAuctionsTable.cgi
+all: currentBids.cgi purchases.cgi didntWin.cgi selling.cgi startAuction.cgi startBid.cgi getAuctions.cgi getAuctionsTable.cgi getAuctionsTableViewOnly.cgi
 
 startAuction.cgi: startAuction.cpp
 	g++  startAuction.cpp -I/opt/homebrew/Cellar/mysql/9.6.0_1/include/ -L/opt/homebrew/Cellar/mysql/9.6.0_1/lib -lmysqlclient -lm -o ../cgi-bin/startAuction.cgi
@@ -27,3 +27,5 @@ getAuctions.cgi: getAuctions.cpp
 getAuctionsTable.cgi: getAuctionsTable.cpp
 	g++ getAuctionsTable.cpp -I/opt/homebrew/Cellar/mysql/9.6.0_1/include/ -L/opt/homebrew/Cellar/mysql/9.6.0_1/lib -lmysqlclient -lm -o ../cgi-bin/getAuctionsTable.cgi
 
+getAuctionsTableViewOnly.cgi: getAuctionsTableViewOnly.cpp
+	g++ getAuctionsTableViewOnly.cpp -I/opt/homebrew/Cellar/mysql/9.6.0_1/include/ -L/opt/homebrew/Cellar/mysql/9.6.0_1/lib -lmysqlclient -lm -o ../cgi-bin/getAuctionsTableViewOnly.cgi
