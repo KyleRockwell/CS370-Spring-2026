@@ -13,3 +13,6 @@ G-Bay Features a
 - view lost auctions
 
 
+## Instructions
+All files are in the public_html folder. To build change to src directory, and run make. Compiled files will be in the cgi-bin folder.
+ 
